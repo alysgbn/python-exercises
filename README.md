@@ -4,4 +4,4 @@
 Easy
 1. Band Name Generator
 2. BMI Calculator
-3. Easy Tip Calculator
+3. Easy Tip Calculators
