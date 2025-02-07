@@ -34,5 +34,47 @@ Hiding your treasure! X marks the spot.
 ['⬜️', '️⬜️', '️⬜️']
 ['⬜️', '⬜️', '️⬜️']
 ['⬜️️', 'X', '⬜️️']
+############################################
+
+Hints
+See if this List method helps you: https://www.w3schools.com/python/ref_list_index.asp
+
+Remember that nested Lists in Python are accessed from outside to inside. e.g. In the List below:
+
+list = [['A', 'B, 'C'], 'E', 'F', 'G']
+E is list[1] C is list[0][2]
+
+Check your formatting. This is correctly formatted:
+['⬜️', '⬜️', '⬜️']
+['⬜️', '⬜️', '⬜️']
+['⬜️', 'X', '⬜️']
+vs.
+
+Incorrectly formatted (missing a space before 'X and extra space after the X and extra space before the comma):
+
+['⬜️', '⬜️', '⬜️']
+['⬜️', '⬜️', '⬜️']
+['⬜️','X ' , '⬜️']
 """
-Test
+
+
+line1 = ["⬜️","️⬜️","️⬜️"]
+line2 = ["⬜️","⬜️","️⬜️"]
+line3 = ["⬜️️","⬜️️","⬜️️"]
+map = [line1, line2, line3]
+print("Hiding your treasure! X marks the spot.")
+position = input() # Where do you want to put the treasure?
+# Your code below
+
+# To have consistency whether capitalised or not 
+letter = position[0].lower()
+#Initialize the columns
+abc = ["a", "b", "c"]
+#Identify which is the column or letter from the user input
+letter_index = abc.index(letter)
+#Identify which is the row, and subtract one to get equal index value
+number_index = int(position[1]) - 1
+#Loop trough the nested list and assign "X" to the position in the nested 2d list.
+map[number_index][letter_index] = "X"
+
+print(f"{line1}\n{line2}\n{line3}")
