@@ -26,6 +26,7 @@ import math
 
 def paint_calc(height, width, cover):
   num_cans = (height * width) / cover
+  #Round up a number to the smallest integer greater than or equal to the given number. 
   round_up_cans = math.ceil(num_cans)
   print(f"You'll need {round_up_cans} cans of paint.")
 
